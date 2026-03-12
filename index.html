@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Masters Academy | Professional Trading Education</title>
+    <style>
+        :root {
+            --primary: #ff9800;
+            --bg: #0b0b0b;
+            --card-bg: #1a1a1a;
+            --text-main: #ffffff;
+            --text-dim: #bbbbbb;
+        }
+
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* --- Navigation --- */
+        header {
+            padding: 15px 5%;
+            background: rgba(17, 17, 17, 0.95);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #222;
+        }
+
+        .logo { font-weight: 800; font-size: 1.4rem; color: var(--primary); }
+        
+        nav a {
+            color: var(--text-main);
+            margin-left: 20px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+        nav a:hover { color: var(--primary); }
+
+        /* --- Hero Section --- */
+        .hero {
+            padding: 140px 20px;
+            text-align: center;
+            background: radial-gradient(circle at center, #1b1b1b 0%, #0b0b0b 100%);
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 56px);
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #fff, #888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-dim);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        /* --- Components --- */
+        .btn {
+            background: var(--primary);
+            color: #000;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255, 152, 0, 0.3);
+        }
+
+        .section { padding: 100px 5%; max-width: 1200px; margin: auto; }
+        .section h2 { text-align: center; font-size: 2.5rem; margin-bottom: 50px; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid #333;
+            transition: 0.3s;
+        }
+        .card:hover { border-color: var(--primary); background: #222; }
+        .card h3 { color: var(--primary); margin-top: 0; }
+
+        /* --- Form --- */
+        .form-container {
+            background: #111;
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+            border: 1px solid #222;
+        }
+
+        form { display: flex; flex-direction: column; gap: 15px; }
+        input {
+            padding: 15px;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 8px;
+            color: white;
+        }
+
+        /* --- Utilities --- */
+        .whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 100;
+        }
+
+        footer { text-align: center; padding: 50px; border-top: 1px solid #222; color: #666; }
+
+        @media (max-width: 768px) {
+            nav { display: none; } /* Simplified for demo - add hamburger later */
+            .section { padding: 60px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">MARKET MASTERS</div>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#programs">Programs</a>
+        <a href="#webinar">Free Session</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Trade with Edge. <br>Build Wealth with Logic.</h1>
+    <p>Move beyond guesswork. Learn the institutional methods of price action and market psychology from a former Professor.</p>
+    <a class="btn" href="#webinar">Reserve Your Free Seat</a>
+</section>
+
+<section id="about" class="section">
+    <h2>Meet Dr. Gujral</h2>
+    <div style="text-align:center; max-width:800px; margin:auto;">
+        <p style="font-size: 1.2rem; color: var(--text-dim);">
+            Transitioning from the world of academia to the trading floor, Dr. Gujral combines pedagogical precision with real-world market battle scars. Our mission is to strip away the "get rich quick" noise and replace it with professional systems.
+        </p>
+    </div>
+</section>
+
+<section id="programs" class="section">
+    <h2>Our Core Pillars</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>01. Price Action</h3>
+            <p>Master supply and demand zones, institutional order flow, and advanced candlestick analysis without lagging indicators.</p>
+        </div>
+        <div class="card">
+            <h3>02. Risk Management</h3>
+            <p>The math behind the money. Learn how to survive the losses so you can thrive during the wins.</p>
+        </div>
+        <div class="card">
+            <h3>03. Psychology</h3>
+            <p>Conquer the "Inner Market." Master your emotions and build the discipline of a professional floor trader.</p>
+        </div>
+    </div>
+</section>
+
+<section id="webinar" class="section">
+    <div class="form-container">
+        <h2 style="font-size: 1.8rem; margin-bottom: 10px;">Free 5-Day Masterclass</h2>
+        <p style="text-align:center; color: #888; margin-bottom: 25px;">Join 5,000+ students who started here.</p>
+        <form action="#">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="tel" placeholder="WhatsApp Number" required>
+            <button type="submit" class="btn">Get Instant Access</button>
+        </form>
+    </div>
+</section>
+
+<a class="whatsapp" href="https://wa.me/YOUR_NUMBER">Chat with Us</a>
+
+<footer>
+    <p>&copy; 2026 Market Masters Academy. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
